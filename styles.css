@@ -1,0 +1,27 @@
+.completed {
+    text-decoration: line-through;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#input {
+    padding: 5px 10px;
+}
+
+button {
+    padding: 5px 15px;
+    cursor: pointer;
+}
