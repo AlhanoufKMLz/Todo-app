@@ -10,10 +10,28 @@
 <body>
     <h1>MY TO DO LIST</h1>
     <form id="myForm">
-        <input type="text" id="input">
-        <button id="add">Add</button>
+        <div class="add-container">
+            <input type="text" id="input" class="input-field">
+            <button id="add" value="add">Add</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="input-search" class="input-field">
+            <button id="search" value="search">Search</button>
+        </div>
+        <div class="filter-container">
+            <select id="myDropdown">
+                <option value="all-tasks">All Tasks</option>
+                <option value="completed">Completed Tasks</option>
+                <option value="active">Active Tasks</option>
+            </select>
+        </div>    
     </form>
-    <div>
+
+    
+    <div id="tasks-container">
+        <h3>I have <span id="counter">0</span> tasks to do.</h3>
+        <h3>I have completed <span id="completed-counter">0</span> of them.</h3>
+        
         <ul id="list-items"></ul>
     </div>
 

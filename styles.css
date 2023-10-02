@@ -1,27 +1,216 @@
+:root {
+	--size: 0.3vmin;
+	--bgr-color: #e91e63;
+	--ico-color: #4e0a21;
+}
+body {
+
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: cadetblue;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+/* input field style */
+.input-field {
+    padding: 5px 10px;
+    background-color: rgb(207, 206, 206);
+    width: 300px;
+    height: 20px;
+    border-radius: 40px;
+    border-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.input-field:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* dropdown menu style */
+#myDropdown {
+    width: 225px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+}
+
+/* tasks style */
+#tasks-container{
+    background-color: palegoldenrod;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 70px;
+    min-height: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+ul{
+    padding: 0;
+}
+li{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(129, 184, 185);
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    padding: 20px;
+    border-radius: 90px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+li:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+}
+#tasks-container h3{
+    text-align: center;
+    color: lightcoral;
+}
+
+/* buttons style */
+button{
+    height: 50px;
+    width: 50px;
+    border-radius: 90px;
+    border-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+}
+.edit-btn{
+    position: absolute;
+    right: 70px;
+    background-color: mediumaquamarine;
+}
+.delete-btn{
+    position: absolute;
+    right: 30px;
+    background-color: lightcoral;
+}
+
+
+/* checkbox style */
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none; /* For Safari and Chrome */
+    -moz-appearance: none;    /* For Firefox */
+}
+.checkbox {
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+}
+.checkbox:before,
+.checkbox:after {
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: 2px solid palegoldenrod;
+    border-radius: 7px;
+}
+.checkbox:after {
+    z-index: 0;
+    border: none;
+}
 .completed {
+    background: rgb(207, 206, 206);
+}
+.completed .checkbox:before {
+    transform: rotateZ(180deg);
+    background: palegoldenrod;
+}
+.completed span {
     text-decoration: line-through;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
 
-h1 {
-    text-align: center;
-}
 
-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-#input {
-    padding: 5px 10px;
-}
 
-button {
-    padding: 5px 15px;
-    cursor: pointer;
+
+
+/* .delete-btn {
+	width: calc(var(--size) * 20);
+	height: calc(var(--size) * 20);
+	border: 0;
+	border-radius: calc(var(--size) * 1);
+	outline: none;
+	background: #a4c75a;
+	background: var(--bgr-color);
+	cursor: pointer;
+	position: relative;
 }
+.delete-btn:before {
+	background: 
+		linear-gradient(0deg, var(--ico-color) 0 calc(var(--size) * 1), #fff0 0 calc( 100% - calc(var(--size) * 1)), var(--ico-color) 0 100%), 
+		linear-gradient(90deg, var(--ico-color) 0 calc(var(--size) * 1), #fff0 0 calc( 100% - calc(var(--size) * 6)), var(--ico-color) 0 100%), 
+		linear-gradient(45deg, var(--ico-color) 0 calc(var(--size) * 2.35), #fff0 0 100%);
+	width: calc(var(--size) * 12);
+	height: calc(var(--size) * 6);
+	position: absolute;
+	content: "";
+	border-radius: calc(var(--size) * 1);
+	transform: rotate(-45deg);
+	top: calc(var(--size) * 6.5);
+	left: calc(var(--size) * 2);
+	transition: all 0.5s ease 0s;
+}
+.delete-btn:after {
+	left: calc(var(--size) * 2);
+	top: calc(var(--size) * 14.5);
+	width: calc(var(--size) * 16);
+	height: calc(var(--size) * 0.9);
+	position: absolute;
+	background: 
+		linear-gradient(90deg, var(--bgr-color) 0 45%, #fff0 0 50%, var(--ico-color) 0 100%), 
+		repeating-linear-gradient(90deg, var(--bgr-color) 0 3%, var(--ico-color) 0 6%);
+	background-position: 86% 0;
+	background-size: 200%;
+	transition: all 0.5s ease 0s;
+	border-radius: 1px;
+	content: "";
+	border-top: calc(var(--size) * 1) solid var(--bgr-color);
+	border-bottom: calc(var(--size) * 1) solid var(--bgr-color);
+	content: "ERASE !";
+	font-family: Arial, Helvetica, serif;
+	font-size: calc(var(--size) * 4);
+	text-align: center;
+	line-height: calc(var(--size) * 16);
+	color: var(--bgr-color);
+	text-shadow: -1px -1px 1px var(--ico-color), 1px 1px 1px var(--ico-color);
+}
+.delete-btn:hover {
+	--ico-color: #18222c;
+	transition: all 0.5s ease 0s;
+}
+.delete-btn:hover:before {
+	left: calc(var(--size) * 4);
+}
+.delete-btn:hover:after {
+	background-position: 73% 0;
+	content: "ERASE?";
+}
+.delete-btn:active {
+	--ico-color: #fff;
+	transition: all 0.5s ease 0s;
+}
+.delete-btn:active:before {
+	left: calc(var(--size) * 6);
+}
+.delete-btn:active:after {
+	background-position: 60% 0;
+	content: "ERASED";
+	color: #fff;
+} */
