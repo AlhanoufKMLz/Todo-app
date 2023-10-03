@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>MY TO DO LIST</h1>
-    <form id="my-add-form">
-        <input type="text" id="input" class="input-field">
-        <button id="add" type="submit">Add</button>
-    </form>
-    <form id="my-search-form">
-        <input type="text" id="input-search" class="input-field">
-        <button id="search" type="submit">Search</button>
-    </form>
-    <select id="myDropdown">
-        <option value="all-tasks">All Tasks</option>
-        <option value="completed">Completed Tasks</option>
-        <option value="active">Active Tasks</option>
-    </select>   
- 
-    <div id="tasks-container">
-        <h3>I have <span id="counter">0</span> tasks to do.</h3>
-        <h3>I have completed <span id="completed-counter">0</span> of them.</h3>
+    <div class="app">
+        <h1>MY TO DO LIST</h1>
+        <div class="forms-container">
+            <form id="my-add-form">
+                <input type="text" id="input" class="input-field">
+                <button id="add" type="submit" class="btn">Add</button>
+            </form>
+            <form id="my-search-form">
+                <input type="text" id="input-search" class="input-field">
+                <button id="search" type="submit" class="btn">Search</button>
+            </form>
+        </div>
         
-        <ul id="list-items"></ul>
+        <div class="filter-container">
+            <h3>I have <span id="counter">0</span> tasks to do. I have completed <span id="completed-counter">0</span> of them.</h3>
+            <select id="myDropdown">
+                <option value="all-tasks">All Tasks</option>
+                <option value="completed">Completed Tasks</option>
+                <option value="active">Active Tasks</option>
+            </select>   
+        </div>
+          
+    
+        <div id="tasks-container">
+            <ul id="list-items"></ul>
+        </div>
     </div>
+    
 
     <script src="index.js"></script>
 </body>
