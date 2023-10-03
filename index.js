@@ -95,7 +95,7 @@ document.getElementById('my-add-form').addEventListener('submit', function(event
 });
 
 // filter
-document.getElementById('my-filter-form').addEventListener('submit', function(event) {
+document.getElementById('myDropdown').addEventListener('change', function(event) {
     event.preventDefault();
 
     const selectedValue = this.value;

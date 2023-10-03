@@ -11,19 +11,17 @@
     <h1>MY TO DO LIST</h1>
     <form id="my-add-form">
         <input type="text" id="input" class="input-field">
-        <button id="add" value="add">Add</button>
+        <button id="add" type="submit">Add</button>
     </form>
     <form id="my-search-form">
         <input type="text" id="input-search" class="input-field">
-        <button id="search" value="search">Search</button>
+        <button id="search" type="submit">Search</button>
     </form>
-    <form id="my-filter-form">
-        <select id="myDropdown">
-            <option value="all-tasks">All Tasks</option>
-            <option value="completed">Completed Tasks</option>
-            <option value="active">Active Tasks</option>
-        </select>
-    </form>    
+    <select id="myDropdown">
+        <option value="all-tasks">All Tasks</option>
+        <option value="completed">Completed Tasks</option>
+        <option value="active">Active Tasks</option>
+    </select>   
  
     <div id="tasks-container">
         <h3>I have <span id="counter">0</span> tasks to do.</h3>
