@@ -13,10 +13,10 @@ h1 {
 }
 form {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
+    margin: 20px;
 }
 
 /* input field style */

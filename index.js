@@ -2,7 +2,7 @@ const myList = document.getElementById('list-items');
 let counter = 0;
 let completedCounter = 0;
 
-document.getElementById('myForm').addEventListener('add', function(event) {
+document.getElementById('my-add-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // make sure the user enters valid task
@@ -95,7 +95,7 @@ document.getElementById('myForm').addEventListener('add', function(event) {
 });
 
 // filter
-document.getElementById('myDropdown').addEventListener('change', function(event) {
+document.getElementById('my-filter-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const selectedValue = this.value;
@@ -119,7 +119,7 @@ document.getElementById('myDropdown').addEventListener('change', function(event)
 });
 
 //search
-document.getElementById('myForm').addEventListener('search', function(event) {
+document.getElementById('my-search-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const keyword = document.getElementById('input-search').value;
