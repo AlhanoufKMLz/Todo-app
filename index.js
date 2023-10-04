@@ -17,16 +17,17 @@ document.getElementById('my-add-form').addEventListener('submit', function(event
         return;
     }
 
-    //creating new item 
-    const newItem = document.createElement("li");
+    // store the task
     const newKey = generateUniqueKey();
+    localStorage.setItem(newKey, inputValue);
+    // creating new item 
+    const newItem = document.createElement("li");
     createCheckBox(newItem);
     const textSpan = createNewSpan(newItem, inputValue);
     createEditBtn(newItem, newKey, textSpan);
     createDeleteBtn(newItem, newKey);
 
     myList.appendChild(newItem);
-    localStorage.setItem(newKey, inputValue);
     document.getElementById('counter').innerText = localStorage.length;
     
     // Reset the form
